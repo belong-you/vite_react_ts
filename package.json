@@ -1,0 +1,28 @@
+{
+  "name": "vite_react_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
+    "@types/node-sass": "^4.11.1",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.29.0",
+    "typed-scss-modules": "^3.3.0",
+    "vite": "^1.0.0-rc.9",
+    "vite-plugin-react": "^3.0.2"
+  },
+  "dependencies": {}
+}
