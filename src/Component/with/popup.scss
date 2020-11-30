@@ -1,0 +1,39 @@
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    .wrapper{
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        box-sizing: border-box;
+        .close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background: #666;
+                border-radius: 2px;
+            }
+            &::after{
+                transform: rotate(45deg);
+            }
+            &::before{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

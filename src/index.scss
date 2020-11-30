@@ -1,0 +1,134 @@
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+$top: 5;
+$buttom: 4;
+
+header {
+    height: #{$top}vh;
+    background: #404040;
+    color: white;
+    display: flex;
+    justify-self: content;
+    align-items: center;
+    padding-left: 20px;
+    .logo, .nav{
+        float: left;
+    }
+    .logo {
+        display: inline-block;
+        position: relative;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 1.2px;
+            background: white;
+        }
+        &::before {
+            right: 0;
+        }
+        &::after {
+            left: 0; bottom: 0;
+        }
+    }
+    .nav{
+        margin-left: 60px;
+        li{
+            float: left;
+            margin: 0 20px;
+            a{
+                color: white;
+                &.active{
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+footer{
+    height: #{$buttom}vh;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    p{
+        margin-top: 6px;
+    }
+}
+section {
+    height: calc(100vh -  #{$top + $buttom}vh);
+    background: #ececec;
+    .list, .content{
+        float: left;
+        height: 100%;
+    }
+
+    $left: 160px;
+    .list {
+        li.active{
+            color: #1890FF;
+        }
+        width: $left;
+        background: white;
+        li{
+            text-align: center;
+            line-height: 3;
+            font-weight: 600;
+            cursor: pointer;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #ccc;
+            }
+            a{
+                color: #404040;
+            }
+        }
+    }
+    .content{
+        width: calc(100% - #{$left});
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+.ant-form.ant-form-horizontal {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    .ant-input{
+        margin-top: 16px;
+    }
+}
+@media (max-width: 540px) {
+    header {
+        justify-content: space-between;
+        .nav{
+            li{
+                margin: 0 10px;
+            }
+        }
+    }
+    section{
+        .list{
+            position: absolute;
+            z-index: 9;
+            transform: translateX(-100%);
+        }
+        .content{
+            width: 100%;
+        }
+        .ant-table-tbody{
+            > tr > td {
+                padding: 4px;
+            }
+            
+        }
+        .ant-table-thead > tr > th {
+            padding: 10px;
+        }
+    }
+}

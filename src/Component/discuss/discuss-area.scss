@@ -1,0 +1,59 @@
+.discuss-area {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    height: calc(100% - 45px);
+    overflow-y: auto;
+    .block {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+        line-height: 34px;
+    }
+    .time{
+        // float: right;
+        font-size: 12px;
+    }
+    .reply, del{
+        font-size: 14px;
+        cursor: pointer;
+    }
+    strong.name, .time, .reply{
+        margin-left: 14px;
+    }
+    p{
+        margin-left: 3em;
+    }
+    del{
+        position: absolute;
+        right: 0; top: 0;
+        color: #666;
+    }
+    .reply{
+        display: inline-block;
+        color: #1e8b5e;
+        white-space: normal;
+        text-decoration: underline;
+    }
+    li {
+        position: relative;
+        margin: 20px 10px;
+    }
+    > li {
+        border-bottom: 1px solid #ccc;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul{
+            margin: 10px 0 0 22px;
+            > li {
+                margin-right: 0;
+            }
+        }
+    }
+}

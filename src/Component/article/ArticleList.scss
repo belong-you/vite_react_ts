@@ -1,0 +1,16 @@
+.wrapper{
+    $right: 200px;
+    li {
+        .left, .right{
+            float: left;
+            padding: 20px;
+            background: white;
+        }
+        .left {
+            width: calc(100% - #{$right});
+        }
+        .right{
+            width: $right;
+        }
+    }
+}

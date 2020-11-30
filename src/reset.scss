@@ -1,6 +1,26 @@
-body{
+body, p, h1, h2, h3, h4, h5, h6{
     margin: 0;
-    h1{
-        color: red;
-    }
+}
+body{
+    background: #ececec;
+    font-size: 16px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+textarea{
+    padding: 0;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    background: transparent;
+    padding: 0;
+}
+input{
+    border: none;
 }

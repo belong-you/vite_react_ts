@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es3",  // 配置编译目标代码的版本标准
+        "module": "ESNext",  // 编译目标使用的模块化标准
+        "lib": ["es2016"],  // 类型检查标准
+        "outDir": "./js",  // 编译后文件目录
+        "moduleResolution": "classic",  // 模块解析策略方式
+        "strictNullChecks": true,  // 更加严格的空类型检查
+        // "removeComments": true,  // 移除注释
+        "noImplicitUseStrict": true,  // 不使用严格模式
+        "esModuleInterop": true,  // 启用 es 模块化交互飞 es模块导出
+        "noEmitOnError": true,  // 错误时不生成编译结果
+        "strictPropertyInitialization": true,  // 更加严格的方式检查属性有无初始化
+        "declaration": true,  // 编译自动生成 .d.ts 文件
+        "sourceMap": true,  // 编译自动生成 .map 文件，用于调试
+        "downlevelIteration": true
+    },
+    // "files": ["./src/index.js"],  // 编译指定文件
+    "include": ["ts"], // 编译指定目录
+}

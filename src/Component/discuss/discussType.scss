@@ -1,0 +1,17 @@
+.discuss-list {
+    background: white;
+    &::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    li{
+        float: left;
+        margin-right: 20px;
+        cursor: pointer;
+        padding: 10px;
+        &.active{
+            color: #1890ff;
+        }
+    }
+}

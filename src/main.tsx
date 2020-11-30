@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comp from './Comp';
+import 'antd/dist/antd.css'
+import App from './App';
 import './reset.scss';
-
-const str = 'hello';
-function App () {
-    return <>{str}
-        <Comp />
-    </>
-}
+import './index.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'));
